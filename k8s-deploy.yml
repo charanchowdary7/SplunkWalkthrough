@@ -80,13 +80,7 @@ spec:
            value: "9997"
          - name: SPLUNK_USER
            value: root
-        #resources:
-        #  limits:
-        #    cpu: 1
-        #    memory: 500Mi
-        #  requests:
-        #    cpu: 200m
-        #    memory: 500Mi
+        
         ports:
         - containerPort: 8000
           name: splunkweb
@@ -167,13 +161,7 @@ spec:
            value: --accept-license --answer-yes
          - name: SPLUNK_USER
            value: root
-        #resources:
-         # limits:
-         #   cpu: 1
-         #   memory: 200Mi
-         # requests:
-         #   cpu: 100m
-         #   memory: 200Mi
+        
         volumeMounts:
         #- name: ufconfig
         #  mountPath: /opt/splunk/etc/apps/search/local
@@ -201,15 +189,7 @@ spec:
       - name: dockersock
         hostPath:
           path: /var/run/docker.sock
-      #- name: ufconfig
-      #  configMap:
-      #    name: splunk-uf-config
-      #- name: splunk-uf-etc
-      #  hostPath:
-      #    path: /var/lib/splunk-uf-etc
-      #- name: splunk-uf-var
-      #  hostPath: 
-      #    path: /var/lib/splunk-uf-var
+      
 
 ---
 apiVersion: extensions/v1beta1
@@ -237,11 +217,5 @@ spec:
            value: --accept-license --answer-yes
          - name: SPLUNK_USER
            value: root
-        #resources:
-        #  limits:
-        #    cpu: 1
-        #    memory: 500Mi
-        #  requests:
-        #    cpu: 200m
-        #    memory: 500Mi
+        
       terminationGracePeriodSeconds: 30
