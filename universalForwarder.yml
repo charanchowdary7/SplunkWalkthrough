@@ -6,7 +6,7 @@
 version: '2'
 services:
   vsplunk_uf:
-    image: busybox
+    image: splunkuniversalforwarder
     volumes:
       - /opt/splunk/etc
       - /opt/splunk/var
