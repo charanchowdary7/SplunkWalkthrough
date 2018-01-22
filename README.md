@@ -1,2 +1,2 @@
-# docker-swarm-walkthrough
-A walkthrough for creating a Docker Swarm
+# Splunk-walkthrough
+A walkthrough for creating a Splunk Universal Forwarder.
